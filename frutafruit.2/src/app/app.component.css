@@ -1,0 +1,100 @@
+img{
+  width:51%;
+}
+
+header .container{
+  background-color: #27887E ;
+  
+}
+/*menu */
+.menuNavegacion{
+  
+  width: 200%;
+  position: absolute;
+  top:60px;
+  z-index: 1000;
+}
+.row.navegacion{
+  position: absolute;
+  top:-60px;
+  right: 90%;
+}
+.menuNavegacion ul {
+  width: 200px;
+  height: 300px;
+  border : 1px solid wheat;
+  position: absolute;
+  
+  top:1px;
+  background-color:#00B8A5;
+}
+.menuNavegacion ul li {
+   list-style-type: none;
+   border-bottom: 1px solid white;
+   padding:10px;
+   
+
+}
+.menuNavegacion ul li:hover{
+  border-bottom: 1px solid wheat;
+}
+.menuNavegacion ul li a{
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.menuNavegacion ul li:hover a{
+  color:wheat;
+  
+}
+/*REGISTRO*/
+button{
+  position: relative;
+  top:68px;
+  font-size: 1.5em;
+}
+
+.ser{
+  background-color:#D53D48 ;
+  padding:21.5%;
+  
+  text-align: center;
+}
+.soy {
+  background-color:#FF6C00 ;
+  padding:22%;
+
+  text-align: center;
+}
+
+@media(max-width: 660px) { 
+ /*registro*/
+ .ser,.soy{
+
+  font-size:0.8em;
+  padding: 14.5px;
+}
+
+  button{
+      position: absolute;
+      top:45px;
+      font-size: 1.5em;
+      
+     
+  }
+  /*menu*/
+  menuNavegacion{
+    
+    width: 100%;
+    position: absolute;
+    top:60px;
+    z-index: 1000;
+  }
+  .row.navegacion{
+    position: relative;
+    top:-60px;
+    right:0%;
+    left: -100px;
+  }
+}

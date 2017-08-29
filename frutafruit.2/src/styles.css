@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+body{
+    font-family: monospace;
+    font-size: 14px;
+    background-color:whitesmoke;
+    color:darkcyan;
+    
+}
+
+
+a,span{
+    color:#fff;
+    text-decoration: none;
+  }

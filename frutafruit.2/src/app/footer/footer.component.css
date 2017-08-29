@@ -1,0 +1,23 @@
+footer{
+    background-color:#4B6A67;
+    color:#fff;
+    height: 111px;
+    padding:20px;
+}
+.jareina{
+    font-size: .7em;
+   
+}
+.jareina p{
+    position: absolute;
+    top: 70px;
+    right: 5px;
+}
+
+@media(max-width: 660px) { 
+    .jareina p{
+    position: relative;
+    top: 50px;
+    right: 0px;
+    }
+}

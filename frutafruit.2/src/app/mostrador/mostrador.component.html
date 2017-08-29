@@ -1,0 +1,15 @@
+<table class="table table-responsive table-hover">
+    <tr>
+        <th>NOMBRE</th>
+        <th>PRECIO/KG</th>
+        <th>VARIEDAD</th>
+        <th>ORIGEN</th>
+      </tr>
+      <tr *ngFor="let i of frutas">
+        <td>{{i.nombre}}</td>
+        <td>{{i.preciokg}}</td>
+        <td>{{i.variedad}}</td>
+        <td>{{i.origen}}</td>
+      </tr>
+
+</table>

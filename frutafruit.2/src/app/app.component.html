@@ -1,0 +1,104 @@
+<header>
+<div class="container">
+  <div class="row">
+         <div class="col-md-5 col-lg-4 col-xs-8"  (mouseenter) ="ocultarMenu()">
+            <img 
+           
+                        (click)='ocultarBienvenida()'
+                        routerLink='/bienvenida' routerLinkActive="active"
+                     class="img-responsive" 
+                    src="../assets/FRUTAFRUIT.png" alt="logotipo">
+         </div>
+<!--menu-->
+   <div class=" col-md-4 col-lg-4 col-lg-offset-2 col-xs-1 ">
+
+    <div class="row">
+    
+          <div  [class]="ocultoMenu" 
+            (mouseenter) ="mostrarMenu()">
+                        <button type="button" class="btn btn-link">
+                             <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                        </button>
+                        </div>
+    </div>
+                     
+                        <div class="row navegacion "
+                             (mouseleave) ="ocultarMenu()">
+                            <div class="col-xs-12  ">        
+                        <nav  class="menuNavegacion {{menuNav}}"
+                         (mouseleave) ="ocultarMenu()">
+                            <ul>
+
+                                    <li>
+                                            <a routerLink="/usuario" 
+                                            *ngIf="authService.authenticated"
+                                             routerLinkActive="active">Usuario</a>
+                                          </li>
+                                <li><a
+                                    (click) ="ocultarBienvenida();"
+                                    routerLink="/mostrador" 
+                                    routerLinkActive="active"
+                                    
+                                   >Mostrador</a></li>
+                            </ul>
+                        </nav>
+                            </div>
+                        </div>
+   </div>
+
+
+<!-- registro oculto -->
+   <div class="col-md-2 col-lg-2 col-xs-3">
+         
+<div [class]="usuarioOculto" 
+(mouseenter) ="mostrarRegistro()"
+ >
+        <button type="button" class="btn btn-link">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </button>
+  </div>
+
+
+<div class="{{ocultoRegistro}}" 
+        (mouseleave) ="ocultarRegistro()">
+  <div class="row ser"  >
+      <div class="col-xs-12  ">
+        <a 
+        (click)="authService.logout();ocultarBienvenida()" 
+        
+        routerLink="/bienvenida"
+          >LOGOUT</a>
+      </div>
+  </div>
+  <div class="row soy "   >
+      <div class="col-xs-12   ">
+        <a 
+        
+         (click)="authService.login();ocultarBienvenida()"
+        
+          routerLinkActive="active"
+        >LOGIN</a>
+      </div>
+  </div>
+
+ </div>
+</div>
+</div>
+</div>
+</header>
+
+
+<section>
+            <div class="container">
+               <div class="row">
+                        <app-bienvenida 
+                        [class]="ocultadaBienvenida"
+                        *ngIf="!authService.authenticated && ocultadaBienvenida">
+                              </app-bienvenida> 
+                  <router-outlet></router-outlet>
+              </div>
+            </div>
+</section>
+
+
+<app-footer></app-footer>
