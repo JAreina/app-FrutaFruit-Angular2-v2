@@ -36,7 +36,7 @@ app angular 2 + express + rutas + auth0
     AUDIENCE: '',
     REDIRECT: 'http://localhost:4200/usuario', // crear esta ruta en la página de auth.com en Clients> Allowed Callbacks Urls
     
-     Cambiar archivo angular-cli.json a .angular-cli.json (anteponer un punto)
+     
       
       npm install
       
